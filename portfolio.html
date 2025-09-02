@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuhaib's Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#experience">Experience</a>
+      <!-- <a href="#projects">Projects</a> -->
+      <a href="#skills">Skills</a>
+      <a href="#languages">Languages</a>
+      <!-- <a href="#gallery">Gallery</a> -->
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <img src="pp.jpeg" alt="Profile Photo">
+    <h1>Zuhaib Mushtaq</h1>
+    <p>QA Lead | AI Enthusiast | Problem Solver</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/zuhaibmushtaq/" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/zuhaibmushtaq" target="_blank">💻 GitHub</a>
+    </div>
+    <br>
+    <a href="CV_ZuhaibMushtaq_AI.pdf" class="btn" target="_blank">Download Resume</a>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><b>QA Lead @ </b> <a href="https://www.workspan.com" target="_blank"> Workspan </a> (January 2023 – Present)</li>
+      <li><b>Associate QA Lead @ </b> <a href="https://www.workspan.com" target="_blank"> Workspan </a> (April 2022 – December 2022)</li>
+      <li><b>Senior QA Engineer @ </b> <a href="https://www.bqe.com" target="_blank"> BQE </a> (May 2015 - April 2022)</li>
+     
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <!-- <section id="projects">
+    <h2>Projects I worked on</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://picsum.photos/300/200" alt="Project 1">
+        <h3>AI Teammate System</h3>
+        <p>Enhanced AI-powered collaboration inside Salesforce with partner insights and engagement tracking.</p>
+      </div>
+      <div class="project">
+        <img src="https://picsum.photos/300/201" alt="Project 2">
+        <h3>Portfolio Website</h3>
+        <p>Built a personal responsive portfolio with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project">
+        <img src="https://picsum.photos/300/202" alt="Project 3">
+        <h3>Expense Tracker</h3>
+        <p>Developed a full-stack expense tracking app with Flask and MySQL.</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Functional Testing</li><li>Performance Testing</li><li>Security Testing</li>
+      <li>API Testing</li><li>Selenium</li><li>Business Intelligence</li>
+      <li>Agile</li><li>SQL</li><li>AI/ML</li>
+    </ul>
+  </section>
+
+  <!-- Languages -->
+  <section class="languages" id="languages">
+    <h2>Languages I Know</h2>
+    <ul>
+      <li>English</li>
+      <li>Hindi</li>
+      <li>Urdu</li>
+    </ul>
+  </section>
+
+  <!-- Gallery -->
+ <!--  <section class="gallery" id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="https://picsum.photos/400/300" alt="Gallery 1">
+      <img src="https://picsum.photos/401/300" alt="Gallery 2">
+      <img src="https://picsum.photos/402/300" alt="Gallery 3">
+      <img src="https://picsum.photos/403/300" alt="Gallery 4">
+    </div>
+  </section> -->
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Zuhaib Mushtaq | All Rights Reserved</p>
+  </footer>
+
+<script>
+  function sendMessage(event) {
+    event.preventDefault();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let subject = encodeURIComponent("Message from " + name);
+    let body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
+
+    window.location.href = `mailto:zuhaibmushtaq@gmail.com?subject=${subject}&body=${body}`;
+  }
+</script>
+
+</body>
+</html>
